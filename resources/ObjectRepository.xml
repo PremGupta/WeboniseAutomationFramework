@@ -1,0 +1,37 @@
+<Fabrily>
+    <homePageLogin>
+        <homePageLoginLink>class=loginOpt</homePageLoginLink>
+        <homePageStartCampaignlink>class=highlight</homePageStartCampaignlink>
+        <username>name=campaigner[email]</username> 
+	    <password>name=campaigner[password]</password>
+	    <loginbtn>class=btn</loginbtn>
+        <homeLink>id=dashboard-campaigns-list</homeLink>
+    </homePageLogin>
+
+    <startTextCampaign>
+       <dashBoardStartCampaignLink>id=dashboard-start-campaign</dashBoardStartCampaignLink>
+       <chooseStyleDropDown>id=productChooser</chooseStyleDropDown>   
+       <homePageLoginLink>class=loginOpt</homePageLoginLink>
+       <homePageStartCampaignlink>class=highlight</homePageStartCampaignlink>
+       <username>name=campaigner[email]</username> 
+       <password>name=campaigner[password]</password>
+       <loginbtn>class=btn</loginbtn>
+       <homeLink>id=dashboard-campaigns-list</homeLink>
+       <subStyle>.//*[@id='scrollbar']/div[2]/ul/li[${num}]/span[1]</subStyle> 
+     </startTextCampaign>
+
+	<login>
+	     <username>name=campaigner[email]</username> 
+	     <password>name=campaigner[password]</password>
+	     <loginbtn>class=btn</loginbtn>
+         <homeLink>id=dashboard-campaigns-list</homeLink>
+	</login>
+	
+	<register type="NewUser">
+	     <username>id=reguname</username> 
+	     <password>name=regpswd</password>
+	     <confpassword>class=regconfpswd</confpassword>
+	     <submit>id=regbtn</submit>  
+	</register> 
+	    
+</Fabrily>

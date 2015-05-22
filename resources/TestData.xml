@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestData>
+	<login>
+		<datasets>
+			<dataset>
+				<username>omkar.ghate@weboniselab.com</username>
+				<paswd>omkar@6186</paswd>
+			</dataset>
+		</datasets>		
+	</login>
+
+
+    <homePageLogin>
+        <datasets>
+			<dataset>
+				<username>omkar.ghate@weboniselab.com</username>
+				<paswd>omkar@6186</paswd>
+			</dataset>
+		</datasets>	
+    </homePageLogin>
+
+    <startTextCampaign>
+        <datasets>
+            <dataset>
+				<username>omkar.ghate@weboniselab.com</username>
+				<paswd>omkar@6186</paswd>                
+            </dataset>
+        </datasets>
+    </startTextCampaign>
+
+    <startTextCampaign>
+        <datasets>
+            <dataset>
+                
+            </dataset>
+        </datasets>
+    </startTextCampaign>
+
+
+	<log>
+		<datasets>
+			<dataset>
+				<username>tanushree@weboapps.com</username>
+				<paswd>123123123</paswd>
+			</dataset>
+			<dataset>
+				<username>pratik@weboapps.com</username>
+				<paswd>test123</paswd>
+			</dataset>
+			<dataset>
+				<username>yogesh@weboapps.com</username>
+				<paswd>yogesh</paswd>
+			</dataset>
+			<dataset>
+				<username>editor_live@drf.com</username>
+				<paswd>editor2014</paswd>
+			</dataset>
+		</datasets>	
+	</log>
+	<Join>
+	    <datasets>
+	        <dataset>
+	            <username>prashant@weboapps.com</username>
+	            <paswd>prashant123</paswd>
+	            <confirmPas>prashant123</confirmPas>
+	        </dataset>
+	        <dataset>
+	            <username>Chirag@weboapps.com</username>
+	            <paswd>chichi</paswd>
+	            <confirmPas>chichi</confirmPas>
+	        </dataset>
+	        <dataset>
+	            <username>nitesh@weboapps.com</username>
+	            <paswd>nitesh</paswd>
+	            <confirmPas>nitesh</confirmPas>
+	        </dataset>
+	        <dataset>
+	            <username>pushkraj@weboapps.com</username>
+	            <paswd>pushkya</paswd>
+	            <confirmPas>pushkya</confirmPas>
+	        </dataset>
+	    </datasets>
+	</Join>
+	
+</TestData>
