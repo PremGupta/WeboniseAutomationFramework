@@ -10,11 +10,11 @@ import java.util.Properties;
 public class Configuration {
 	
 	public static String browser="chrome";
-	public static String objRepo="/home/ankit/Ankit work/ObjectRepository.xml";
-	public static String dataFile="/home/ankit/Ankit work/TestData.xml";
+	public static String objRepo="E:\\webonise-project\\WeboniseAutomation\\Webonise_Automation\\resources\\ObjectRepository.xml";
+	public static String dataFile="E:\\webonise-project\\WeboniseAutomation\\Webonise_Automation\\resources\\TestData.xml";
 	private static String path;
 	
-	private static String configPath = "/resources/config.properties";
+	private static String configPath = "\\resources\\config.properties";
 	
 	
 	static InputStream input = null;

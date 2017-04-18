@@ -29,5 +29,13 @@ public class FabrilyLogin extends WeboAutomation {
 		Assert.assertTrue(verify.checkString(getObjID("homeLink"), "HOME"), "Successful login");
 		
 	}
+	
+	@Test(dataProvider = "xml",priority = 1, enabled = true)
+	public void testcasename(Integer iteration, Boolean expectedResult)	{
+		updateTCData(iteration);
+		actions.launchBrowser("");
+		actions.click(getObjID("RegisterLink"));
+		
+		
+	}
 }
-

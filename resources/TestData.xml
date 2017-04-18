@@ -3,38 +3,42 @@
 	<login>
 		<datasets>
 			<dataset>
-				<username>omkar.ghate@weboniselab.com</username>
-				<paswd>omkar@6186</paswd>
+				<username>ankit.khandelwal@weboniselab.com</username>
+				<paswd>qwerty</paswd>
 			</dataset>
 		</datasets>		
 	</login>
 
+	<testingXpath>
+			<datasets>
+			<dataset>
+				<username>ankit.khandelwal@weboniselab.com</username>
+				<paswd>qwerty</paswd>
+			</dataset>
+		</datasets>
+	</testingXpath>
 
     <homePageLogin>
         <datasets>
 			<dataset>
-				<username>omkar.ghate@weboniselab.com</username>
-				<paswd>omkar@6186</paswd>
+				<username>ankit.khandelwal@weboniselab.com</username>
+				<paswd>qwerty</paswd>
 			</dataset>
 		</datasets>	
     </homePageLogin>
 
-    <startTextCampaign>
+    <startCampaign>
         <datasets>
             <dataset>
-				<username>omkar.ghate@weboniselab.com</username>
-				<paswd>omkar@6186</paswd>                
+				<username>ankit.khandelwal@weboniselab.com</username>
+				<paswd>qwerty</paswd> 
+				<addtionalProfit>3.35</addtionalProfit>              
+				<addtionalProfit1>2.35</addtionalProfit1>
+				<addtionalProfit2>2.25</addtionalProfit2>
+				
             </dataset>
         </datasets>
-    </startTextCampaign>
-
-    <startTextCampaign>
-        <datasets>
-            <dataset>
-                
-            </dataset>
-        </datasets>
-    </startTextCampaign>
+    </startCampaign>
 
 
 	<log>

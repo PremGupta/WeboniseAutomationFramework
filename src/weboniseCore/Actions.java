@@ -2,7 +2,6 @@ package weboniseCore;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,6 +12,9 @@ public class Actions {
 	static WebDriver driver ;
 	public static ArrayList<String> dropDownList;
 	public static WebElement ulContainer;
+	
+	ObjectRepository objectrepo = new ObjectRepository();
+	
 	
 	protected void setDriver(WebDriver mydriver){
 		
@@ -29,6 +31,7 @@ public class Actions {
 	public void click(By byObj){
 		try{
 			driver.findElement(byObj).click();
+			Thread.sleep(2000);
 			System.out.println("Clicked on " + byObj.toString());
 		}
 		catch(Exception e){
@@ -61,16 +64,22 @@ public class Actions {
 		
 	}
 
-	public int getDropDownItem(By byObj){
+	public int getDropDownItem(By byObj, String locator){
+		try{
 		dropDownList = new ArrayList<String>();
 		ulContainer = driver.findElement(byObj);
-		List<WebElement> dropDownvalue = ulContainer.findElements(By.tagName("li"));
+		List<WebElement> dropDownvalue = ulContainer.findElements(By.tagName(locator));
 		for (WebElement firstElement:dropDownvalue)
 			dropDownList.add(firstElement.getText());
+		//System.out.println(dropDownList);
+		}
+		catch (Exception e){
+			takeSS();
+			e.printStackTrace();
+		}
 		return dropDownList.size();
-		
 	}
-	
+
 	public void select(By byObj, String textToSet){
 		try{
 		WebElement dropDown = driver.findElement(byObj);
@@ -83,6 +92,7 @@ public class Actions {
 			e.printStackTrace();
 		}
 	}
-	
-	
 }
+	
+	
+	

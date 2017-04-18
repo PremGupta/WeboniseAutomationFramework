@@ -1,5 +1,7 @@
 package weboniseCore;
 import java.lang.reflect.Method;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -33,11 +35,11 @@ public class WeboAutomation {
             driver = new FirefoxDriver();
         }
         else if (type.equalsIgnoreCase("chrome")) {
-        	System.setProperty("webdriver.chrome.driver", "/home/ankit/Ankit work/chromedriver");
+        	System.setProperty("webdriver.chrome.driver", "C:\\Users\\Prem\\Downloads\\Study\\Selenium Files\\Zip Files\\chromedriver_win32\\chromedriver.exe");
         	driver = new ChromeDriver();
         }
         actions.setDriver(driver);
-        //driver.manage().timeouts().implicitlyWait(DEFAULT_IMPLICIT_WAIT, TimeUnit.MILLISECONDS);
+        driver.manage().timeouts().implicitlyWait(30000, TimeUnit.MILLISECONDS);
     }
 	
 	@BeforeMethod(alwaysRun = true)
@@ -73,52 +75,14 @@ public class WeboAutomation {
     	driver = null;
     }
     
-    /*public By getObjIDByDynamicXpath(String objName,Integer Number){
-    	 objectLocator = objRepo.getObjIDByDynamic(objName, Number);
-    	 System.out.println("objectLocator "+objectLocator);
-			we = By.xpath(objectLocator);
-		return we;
-    	
-    }*/
-	
+
+    public By getObjID(String objName,int n){
+		
+		return objRepo.getObjID(objName, n);
+    }
+    
 	public By getObjID(String objName){
-		
-		//return objRepo.getObjID(objName);
-		
-		objectLocator = objRepo.getObjID(objName);
-		//System.out.println("Object locator is - " + objectLocator);
-		
-		locatorType = objectLocator.split("=")[0];
-		locatorValue = objectLocator.split("=")[1];
-		
-		switch(locatorType.toLowerCase()){
-			case "id" : //System.out.println("Identifier type is ID");
-						we =  By.id(locatorValue);
-						break;
-			case "name" : //System.out.println("Identifier type is name");
-						we =  By.name(locatorValue);
-						break;
-			case "class" : //System.out.println("Identifier type is class");
-						we =  By.className(locatorValue);
-						break;
-						
-			case "linktext" : //System.out.println("Identifier type is linktext");
-						we = By.linkText(locatorValue);
-						break;
-						
-			case "xpath" : //System.out.println("Identifier type is xpath");
-						we = By.xpath(locatorValue);
-						break;
-						
-			case "cssselector" : //System.out.println("Identifier type is cssSelector");
-						we = By.cssSelector(locatorValue);
-						break;
-			default : System.out.println("Unknow type of identifier");	
-				
-		}
-		
-		return we;
-		
+		return objRepo.getObjID(objName);
 	}
 	
 	public void updateTCData(Integer iteration){
@@ -129,9 +93,11 @@ public class WeboAutomation {
 		return testdata.getValue(varName);
 	}
 	
+	/*public int getAttributesTittle(String byObj, String color){
+		return actions.getAttributesTittle(byObj, color);
+	}*/
 	
-	@DataProvider(name = "xml")
-	   public static Object[][] getTestData(Method method) {
+	@DataProvider(name = "xml")	public static Object[][] getTestData(Method method) {
 		try {
 			setUp(method);
 		} catch (Exception e) {

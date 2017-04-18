@@ -8,7 +8,11 @@
         <homeLink>id=dashboard-campaigns-list</homeLink>
     </homePageLogin>
 
-    <startTextCampaign>
+	<testingXpath>
+			<subStyle>xpath=.//*[@id='scrollbar']/div[2]/ul/li[3]</subStyle> 
+	</testingXpath>
+
+    <startCampaign>
        <dashBoardStartCampaignLink>id=dashboard-start-campaign</dashBoardStartCampaignLink>
        <chooseStyleDropDown>id=productChooser</chooseStyleDropDown>   
        <homePageLoginLink>class=loginOpt</homePageLoginLink>
@@ -17,8 +21,27 @@
        <password>name=campaigner[password]</password>
        <loginbtn>class=btn</loginbtn>
        <homeLink>id=dashboard-campaigns-list</homeLink>
-       <subStyle>.//*[@id='scrollbar']/div[2]/ul/li[${num}]/span[1]</subStyle> 
-     </startTextCampaign>
+       <subStyle>xpath=.//*[@id='scrollbar']/div[2]/ul/li[${num}]</subStyle> 
+       <selectColor>xpath=.//*[@id='colorList']/li[6]</selectColor>
+       <campaignWithText>id=writeText</campaignWithText>
+       <campaignInputTextFront>id=frontTextInput1</campaignInputTextFront>
+       <backDesign>id=showRear</backDesign>
+       <campaignInputTextBack>id=rearTextInput1</campaignInputTextBack>
+       <nextButton>id=saveBtn</nextButton>
+       <DisplayRearProductByDefault>id=seller_campaign_display_rear</DisplayRearProductByDefault>
+       <addtionalProfit>id=primary_profit</addtionalProfit>
+       <addtionalColor>class=transparentColorBackground</addtionalColor>
+       <AddtionalChooseColor>xpath=html/body/div[${num}]/div[1]/div/div[1]/span[2]/span</AddtionalChooseColor>
+	   <addExtraStyle>id=addAdditionalStyle</addExtraStyle>
+       <addtionalStyleDropDown1>id=brand1</addtionalStyleDropDown1>
+       <addtionalStyleDropDown2>id=brand2</addtionalStyleDropDown2>
+       <addtionalStyleDropDown3>id=brand3</addtionalStyleDropDown3>
+       <lastStep>id=finalStepTshirtView</lastStep>
+       <campaignTittle>id=seller_campaign_title</campaignTittle>
+       <campaignDescription>id=seller_campaign_listing_description_ifr</campaignDescription>
+       <campaignURL>id=seller_campaign_pretty_url</campaignURL>
+       <launchCampaign>class=btn</launchCampaign>
+       </startCampaign>
 
 	<login>
 	     <username>name=campaigner[email]</username> 
